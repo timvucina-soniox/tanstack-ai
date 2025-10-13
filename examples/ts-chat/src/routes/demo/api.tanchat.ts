@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AI, defineTools, tool } from "@tanstack/ai";
+import { AI, tool } from "@tanstack/ai";
 import { OllamaAdapter } from "@tanstack/ai-ollama";
 import { OpenAIAdapter } from "@tanstack/ai-openai";
 
@@ -13,36 +13,49 @@ You can use the following tools to help the user:
 - recommendGuitar: Recommend a guitar to the user
 `;
 
-// Define tools registry with full type safety using defineTools + tool()
-const tools = defineTools({
+// Define tools with the exact Tool structure - no conversions under the hood!
+const tools = {
   getGuitars: tool({
-    description: "Get all products from the database",
-    properties: {},
+    type: "function",
+    function: {
+      name: "getGuitars",
+      description: "Get all products from the database",
+      parameters: {
+        type: "object",
+        properties: {},
+        required: [],
+      },
+    },
     execute: async () => {
       return JSON.stringify(guitars);
     },
   }),
   recommendGuitar: tool({
-    description: "Use this tool to recommend a guitar to the user",
-    properties: {
-      id: {
-        type: "string",
-        description: "The id of the guitar to recommend",
-        required: true,
+    type: "function",
+    function: {
+      name: "recommendGuitar",
+      description: "Use this tool to recommend a guitar to the user",
+      parameters: {
+        type: "object",
+        properties: {
+          id: {
+            type: "string",
+            description: "The id of the guitar to recommend",
+          },
+          name: {
+            type: "boolean",
+            description: "Whether to include the name in the response",
+          },
+        },
+        required: ["id"],
       },
-      name: {
-        type: "boolean",
-        description: "Whether to include the name in the response",
-        required: false,
-
-      }
     },
     execute: async (args) => {
-      // ✅ args is now properly typed as { id: string } with full type safety!
+      // ✅ args is automatically typed as { id: string; name?: boolean }
       return JSON.stringify({ id: args.id });
     },
   }),
-});
+}
 
 // Initialize AI with tools and system prompts in constructor
 const ai = new AI({
