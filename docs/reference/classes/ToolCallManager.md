@@ -139,7 +139,10 @@ Clear the tool calls map for the next iteration
 ### executeTools()
 
 ```ts
-executeTools(doneChunk): AsyncGenerator<ToolResultStreamChunk, ModelMessage[], void>;
+executeTools(doneChunk): AsyncGenerator<ToolResultStreamChunk, ModelMessage<
+  | string
+  | ContentPart<unknown, unknown, unknown, unknown>[]
+| null>[], void>;
 ```
 
 Defined in: [tools/tool-calls.ts:111](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/tools/tool-calls.ts#L111)
@@ -155,7 +158,10 @@ Also yields tool_result chunks for streaming
 
 #### Returns
 
-`AsyncGenerator`\<[`ToolResultStreamChunk`](../interfaces/ToolResultStreamChunk.md), [`ModelMessage`](../interfaces/ModelMessage.md)[], `void`\>
+`AsyncGenerator`\<[`ToolResultStreamChunk`](../interfaces/ToolResultStreamChunk.md), [`ModelMessage`](../interfaces/ModelMessage.md)\<
+  \| `string`
+  \| [`ContentPart`](../type-aliases/ContentPart.md)\<`unknown`, `unknown`, `unknown`, `unknown`\>[]
+  \| `null`\>[], `void`\>
 
 ***
 

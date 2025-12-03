@@ -9,7 +9,7 @@ title: AgentLoopStrategy
 type AgentLoopStrategy = (state) => boolean;
 ```
 
-Defined in: [types.ts:240](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L240)
+Defined in: [types.ts:419](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L419)
 
 Strategy function that determines whether the agent loop should continue
 

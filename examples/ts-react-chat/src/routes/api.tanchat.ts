@@ -34,7 +34,6 @@ Step 1: Call getGuitars()
 Step 2: Call recommendGuitar(id: "6") 
 Step 3: Done - do NOT add any text after calling recommendGuitar
 `
-
 const addToCartToolServer = addToCartToolDef.server((args) => ({
   success: true,
   cartId: 'CART_' + Date.now(),
@@ -58,6 +57,9 @@ export const Route = createFileRoute('/api/tanchat')({
         const abortController = new AbortController()
 
         const { messages } = await request.json()
+
+        // Create adapter instance for type inference
+
         try {
           const stream = chat({
             adapter: openai(),

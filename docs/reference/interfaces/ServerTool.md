@@ -45,7 +45,7 @@ Defined in: [tools/tool-factory.ts:12](https://github.com/TanStack/ai/blob/main/
 description: string;
 ```
 
-Defined in: [types.ts:55](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L55)
+Defined in: [types.ts:234](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L234)
 
 Clear description of what the tool does.
 
@@ -70,7 +70,7 @@ Be specific about what the tool does, what parameters it needs, and what it retu
 optional execute: (args) => any;
 ```
 
-Defined in: [types.ts:111](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L111)
+Defined in: [types.ts:290](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L290)
 
 Optional function to execute when the model calls this tool.
 
@@ -114,7 +114,7 @@ execute: async (args) => {
 optional inputSchema: TInput;
 ```
 
-Defined in: [types.ts:74](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L74)
+Defined in: [types.ts:253](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L253)
 
 Zod schema describing the tool's input parameters.
 
@@ -149,7 +149,7 @@ z.object({
 optional metadata: Record<string, any>;
 ```
 
-Defined in: [types.ts:117](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L117)
+Defined in: [types.ts:296](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L296)
 
 Additional metadata for adapters or custom extensions
 
@@ -165,7 +165,7 @@ Additional metadata for adapters or custom extensions
 name: TName;
 ```
 
-Defined in: [types.ts:45](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L45)
+Defined in: [types.ts:224](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L224)
 
 Unique name of the tool (used by the model to call it).
 
@@ -190,7 +190,7 @@ Must be unique within the tools array.
 optional needsApproval: boolean;
 ```
 
-Defined in: [types.ts:114](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L114)
+Defined in: [types.ts:293](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L293)
 
 If true, tool execution requires user approval before running. Works with both server and client tools.
 
@@ -206,7 +206,7 @@ If true, tool execution requires user approval before running. Works with both s
 optional outputSchema: TOutput;
 ```
 
-Defined in: [types.ts:92](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L92)
+Defined in: [types.ts:271](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L271)
 
 Optional Zod schema for validating tool output.
 

@@ -19,7 +19,7 @@ Includes automatic tool execution loop
 
 ### TAdapter
 
-`TAdapter` *extends* [`AIAdapter`](../interfaces/AIAdapter.md)\<`any`, `any`, `any`, `any`, `any`\>
+`TAdapter` *extends* [`AIAdapter`](../interfaces/AIAdapter.md)\<`any`, `any`, `any`, `any`, `any`, `any`, [`DefaultMessageMetadataByModality`](../interfaces/DefaultMessageMetadataByModality.md)\>
 
 ### TModel
 
@@ -29,7 +29,7 @@ Includes automatic tool execution loop
 
 ### options
 
-`Omit`\<[`ChatStreamOptionsUnion`](../type-aliases/ChatStreamOptionsUnion.md)\<`TAdapter`\>, `"model"` \| `"providerOptions"` \| `"adapter"`\> & `object`
+[`ChatStreamOptionsForModel`](../type-aliases/ChatStreamOptionsForModel.md)\<`TAdapter`, `TModel`\>
 
 Chat options
 

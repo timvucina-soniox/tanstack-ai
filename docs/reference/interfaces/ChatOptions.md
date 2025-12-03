@@ -5,7 +5,7 @@ title: ChatOptions
 
 # Interface: ChatOptions\<TModel, TProviderOptionsSuperset, TOutput, TProviderOptionsForModel\>
 
-Defined in: [types.ts:245](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L245)
+Defined in: [types.ts:424](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L424)
 
 Options passed into the SDK and further piped to the AI provider.
 
@@ -35,7 +35,7 @@ Options passed into the SDK and further piped to the AI provider.
 optional abortController: AbortController;
 ```
 
-Defined in: [types.ts:273](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L273)
+Defined in: [types.ts:452](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L452)
 
 AbortController for request cancellation.
 
@@ -62,17 +62,20 @@ https://developer.mozilla.org/en-US/docs/Web/API/AbortController
 optional agentLoopStrategy: AgentLoopStrategy;
 ```
 
-Defined in: [types.ts:255](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L255)
+Defined in: [types.ts:434](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L434)
 
 ***
 
 ### messages
 
 ```ts
-messages: ModelMessage[];
+messages: ModelMessage<
+  | string
+  | ContentPart<unknown, unknown, unknown, unknown>[]
+  | null>[];
 ```
 
-Defined in: [types.ts:252](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L252)
+Defined in: [types.ts:431](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L431)
 
 ***
 
@@ -82,7 +85,7 @@ Defined in: [types.ts:252](https://github.com/TanStack/ai/blob/main/packages/typ
 model: TModel;
 ```
 
-Defined in: [types.ts:251](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L251)
+Defined in: [types.ts:430](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L430)
 
 ***
 
@@ -92,7 +95,7 @@ Defined in: [types.ts:251](https://github.com/TanStack/ai/blob/main/packages/typ
 optional options: CommonOptions;
 ```
 
-Defined in: [types.ts:256](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L256)
+Defined in: [types.ts:435](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L435)
 
 ***
 
@@ -102,7 +105,7 @@ Defined in: [types.ts:256](https://github.com/TanStack/ai/blob/main/packages/typ
 optional output: TOutput;
 ```
 
-Defined in: [types.ts:259](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L259)
+Defined in: [types.ts:438](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L438)
 
 ***
 
@@ -112,7 +115,7 @@ Defined in: [types.ts:259](https://github.com/TanStack/ai/blob/main/packages/typ
 optional providerOptions: TProviderOptionsForModel;
 ```
 
-Defined in: [types.ts:257](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L257)
+Defined in: [types.ts:436](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L436)
 
 ***
 
@@ -122,7 +125,7 @@ Defined in: [types.ts:257](https://github.com/TanStack/ai/blob/main/packages/typ
 optional request: Request | RequestInit;
 ```
 
-Defined in: [types.ts:258](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L258)
+Defined in: [types.ts:437](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L437)
 
 ***
 
@@ -132,7 +135,7 @@ Defined in: [types.ts:258](https://github.com/TanStack/ai/blob/main/packages/typ
 optional systemPrompts: string[];
 ```
 
-Defined in: [types.ts:254](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L254)
+Defined in: [types.ts:433](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L433)
 
 ***
 
@@ -142,4 +145,4 @@ Defined in: [types.ts:254](https://github.com/TanStack/ai/blob/main/packages/typ
 optional tools: Tool<ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, ZodType<unknown, unknown, $ZodTypeInternals<unknown, unknown>>, string>[];
 ```
 
-Defined in: [types.ts:253](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L253)
+Defined in: [types.ts:432](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L432)

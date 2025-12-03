@@ -5,7 +5,7 @@ title: AIAdapterConfig
 
 # Interface: AIAdapterConfig
 
-Defined in: [types.ts:476](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L476)
+Defined in: [types.ts:684](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L684)
 
 ## Properties
 
@@ -15,7 +15,7 @@ Defined in: [types.ts:476](https://github.com/TanStack/ai/blob/main/packages/typ
 optional apiKey: string;
 ```
 
-Defined in: [types.ts:477](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L477)
+Defined in: [types.ts:685](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L685)
 
 ***
 
@@ -25,7 +25,7 @@ Defined in: [types.ts:477](https://github.com/TanStack/ai/blob/main/packages/typ
 optional baseUrl: string;
 ```
 
-Defined in: [types.ts:478](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L478)
+Defined in: [types.ts:686](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L686)
 
 ***
 
@@ -35,7 +35,7 @@ Defined in: [types.ts:478](https://github.com/TanStack/ai/blob/main/packages/typ
 optional headers: Record<string, string>;
 ```
 
-Defined in: [types.ts:481](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L481)
+Defined in: [types.ts:689](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L689)
 
 ***
 
@@ -45,7 +45,7 @@ Defined in: [types.ts:481](https://github.com/TanStack/ai/blob/main/packages/typ
 optional maxRetries: number;
 ```
 
-Defined in: [types.ts:480](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L480)
+Defined in: [types.ts:688](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L688)
 
 ***
 
@@ -55,4 +55,4 @@ Defined in: [types.ts:480](https://github.com/TanStack/ai/blob/main/packages/typ
 optional timeout: number;
 ```
 
-Defined in: [types.ts:479](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L479)
+Defined in: [types.ts:687](https://github.com/TanStack/ai/blob/main/packages/typescript/ai/src/types.ts#L687)
